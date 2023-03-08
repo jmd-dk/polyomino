@@ -1,4 +1,5 @@
-**Discovering and rectangular tiling of [polyominoes](https://en.wikipedia.org/wiki/Polyomino)**
+Discovering and rectangular tiling of [polyominoes](https://en.wikipedia.org/wiki/Polyomino)
+---
 
 
 ### Quick guide
@@ -31,7 +32,7 @@ For colour output, install [Blessings](https://github.com/erikrose/blessings):
 ```bash
 python -m pip install blessings
 ```
-If colours appear insufficient, try running with
+If only a few colours appear, try running with
 ```bash
 TERM=xterm-256color python polyomino.py
 ```
