@@ -104,13 +104,14 @@ class Piece:
                 arr[block] = self.id
                 pos[i] = block
             self.syms.append(Sym(width, height, arr, pos))
-    def get_shape(self, blocks):
-        width  = 1 + max(block[0] for block in blocks)
-        height = 1 + max(block[1] for block in blocks)
-        return width, height
     def prune_syms(self, keep):
         while len(self.syms) > keep:
             self.syms.pop()
+    @staticmethod
+    def get_shape(blocks):
+        width  = 1 + max(block[0] for block in blocks)
+        height = 1 + max(block[1] for block in blocks)
+        return width, height
 Sym = collections.namedtuple('Sym', ('width', 'height', 'arr', 'pos'))
 
 # Function for finding possible rectangles to place the pieces within
