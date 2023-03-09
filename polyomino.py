@@ -75,7 +75,7 @@ def generate_symmetries(piece):
             (block[0] + dx, block[1] + dy)
             for block in piece
         )))
-    return list(symmetries)
+    return symmetries
 @functools.lru_cache(cache_size)
 def flip(piece):
     return tuple((-block[0], block[1]) for block in piece)
